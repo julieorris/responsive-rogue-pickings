@@ -32,25 +32,26 @@ h4 {
 }
 
 h1 {
-	font-size: 1.875rem;
+	font-size: 1.875em;
 }
 
 h2 {
-	font-size: 1.5rem;
+	font-size: 1.5em;
 	/****padding: 5px 0;****/
 }
 
 h3 {
-	font-size: 1.25rem;
+	font-size: 1.25em;
 	/***padding: 30px 0;***/
 }
 
 h4 {
-	font-size: 0.75rem;
+	font-size: 0.75em;
 }
 
 p {
-	line-height: 2.25rem;
+	font-size: 1rem;
+	line-height: 36px;
 }
 
 /******** HEADER STYLES ********/
@@ -63,6 +64,7 @@ header h1 {
 	width: 100%;
 	margin: 0;
 	padding: 38px 0 20px 0;
+	border-bottom: 3px solid #77a466;
 }
 
 header h1 span {
@@ -70,7 +72,6 @@ header h1 span {
 }
 
 header nav {
-	border-top: 3px solid #77a466;
 	width: 100%;
 }
 
@@ -113,6 +114,8 @@ header nav ul li a {
 /******** BOTTOM SECTION ********/
 .top-section,
 .bottom-section {
+	display: flex;
+	justify-content: center;
 
 }
 
@@ -163,7 +166,8 @@ header nav ul li a {
 /******** FOOTER STYLES ********/
 /* The widths are in a percentage! */
 footer {
-	text-align: center;
+	display: flex;
+	justify-content: center;
 	margin-top: 8px;
 }
 
@@ -172,4 +176,65 @@ footer span {
 	text-transform: lowercase;
 	color: #45610E;
 	font-size: 0.875rem;
+}
+
+/**** tablet styles ****/
+@media all and (min-width: 768px) {
+	.bottom-section .content-wrapper {
+		border-top: 5px solid #EEE;
+		border-bottom: 5px solid #eee;
+		width: 90%;
+		justify-content: space-evenly;
+	}
+
+	.section-one, .section-three{
+		width: 30%;
+		border: none;
+	
+	}
+
+	.section-two {
+		width: 30%;
+		padding: 0 30px;
+		border-left: 5px solid #eee;
+		border-right: 5px solid #eee;
+	
+	}
+
+}
+
+
+
+/**** desktop styles ****/
+@media all and (min-width: 1200px) {
+	body{
+		font-size: 1em;
+	}
+
+	header .content-wrapper{
+		justify-content: space-between;
+		padding: 20px 0;
+		align-items: center;
+	
+	}
+	
+	header h1 {
+		width: 30%;
+		padding: 0;
+		border-bottom: none;
+		text-align: left;
+
+	}
+
+
+	header nav {
+		width: 21%;
+	}
+
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	
 }
